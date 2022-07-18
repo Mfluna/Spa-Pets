@@ -79,6 +79,9 @@ iframe {
   line-height: 1.3;
   padding: 10px 0px;
   text-transform: capitalize;
+  animation: fadeIn; 
+  animation-duration: 2s;
+
 }
 .title-flex {
   font-size: 24px;
@@ -249,7 +252,7 @@ main {
   grid-area: text-left;
 }
 .spa-home .container .text-left .bg {
-  
+
 }
 .spa-home.bg-principal {
   display: inline-flex;
