@@ -7,6 +7,8 @@
   /* COLORS */
   --c-primary: #f69100;
   --c-secondary: #f8f8f8;
+  --c-terciary: #151515;
+  --c-fourth: #f1f1f1;
   --c-hover: #222;
 
   /* ANIMACIONES */
@@ -80,7 +82,7 @@ iframe {
   padding: 10px 0px;
   text-transform: capitalize;
   animation: fadeIn; 
-  animation-duration: 2s;
+  animation-duration: 2.5s;
 
 }
 .title-flex {
@@ -163,21 +165,21 @@ iframe {
 
 /* HEADER */
 
-header.sticky {
+/* header.sticky {
   position: fixed;
   z-index: 7;
   top: 0;
   width: 100%;
   background-color: ;
-}
+} */
 
 header#page-header {
   grid-area: header;
   height: auto;
   padding: 20px;
   display: block;
-  background-color: transparent;
-  position: absolute;
+  background-color: var(--c-terciary);
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 6;
@@ -205,7 +207,7 @@ header#page-header li.menu-item a {
   padding: 10px;
   text-transform: uppercase;
   font-family: Oswald, sans-serif;
-  color: #29293a;
+  color: #fff;
   letter-spacing: 0.08em;
   font-weight: 500;
   font-size: 1rem;
@@ -467,7 +469,6 @@ main {
 }
 .contacto-form .container .item-formulario {
   grid-area: item-formulario;
-  width: 100%;
 }
 .contacto-form .container .item-map {
   grid-area: item-map;
@@ -540,7 +541,7 @@ main {
   margin-bottom: 30px;
   padding-bottom: 30px;
   color: #29293a;
-  font-size: 58px;
+  font-size: 3.625rem;
 }
 .bg-principal .container .text-left {
 }
@@ -911,6 +912,7 @@ footer a {
     grid-template-areas:
       "item-formulario"
       "item-map";
+      padding: initial;
   }
 
   .contacto-form .item-formulario .bg{
@@ -921,6 +923,7 @@ footer a {
     display: block;
     width: 100%;
   }
+
 
   /* FOOTER */
 
@@ -934,6 +937,8 @@ footer a {
       "item-redes"
       "copy-right";
   }
+
+  
 }
 
 @media screen and (max-width: 700px) {
@@ -941,7 +946,7 @@ footer a {
 
   header .responsive-menu > div {
     height: 4px;
-    background-color: #000;
+    background-color: #fff;
     margin: 3px 0;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -1008,5 +1013,28 @@ footer a {
       "item-first"
       "item-last";
     /* gap: 5%; */
+  }
+
+  /* SECTION CONTACTO */
+
+  .bg-principal {
+    background-image: none;
+    background-color: var(--c-fourth); 
+  }
+
+  .bg-principal .container .text-left .title {
+    font-size: 2.5rem
+  }
+
+  .redes-sociales {
+    display: none;
+  }
+
+  .contacto-icons .container{
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template-areas: "phone-contact"
+    "mail-contact" 
+    "map-contact";
   }
 }
