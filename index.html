@@ -30,6 +30,8 @@
     <!-- Animaciones -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
@@ -39,9 +41,19 @@
     <header id="page-header" class="sticky">
         <div class="container">
             <div class="responsive-menu">
-                <div></div>
-                <div></div>
-                <div></div>
+
+                <input type="checkbox" id="active">
+                <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+                <div class="wrapper">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+
             </div>
             <nav class="menu-nav">
                 <ul class="menu">

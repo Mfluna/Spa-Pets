@@ -193,6 +193,7 @@ header#page-header .container {
   justify-items: center;
   max-width: initial;
   column-gap: 9rem;
+  align-items: center;
 }
 header#page-header nav.menu-nav {
   grid-area: menu-nav;
@@ -453,18 +454,18 @@ main {
 
 /* servicios */
 
-.servicios-spa{
-
+.servicios-spa {
 }
-.servicios-spa .container{
+.servicios-spa .container {
   display: grid;
   grid-template-columns: ;
   grid-template-rows: ;
   grid-template-areas: ;
   justify-items: center;
 }
-.servicios-spa .container .galeria{}
-.servicios-spa .container .galeria .flex{
+.servicios-spa .container .galeria {
+}
+.servicios-spa .container .galeria .flex {
   gap: 0;
   flex-wrap: wrap;
   justify-content: center;
@@ -653,10 +654,11 @@ main {
   grid-template-areas: "imagen-flex line-divider date";
 }
 .linea-tiempo .item.box-first {
-
 }
-.linea-tiempo .item.box-secondary{}
-.linea-tiempo .item.box-terciary{}
+.linea-tiempo .item.box-secondary {
+}
+.linea-tiempo .item.box-terciary {
+}
 .linea-tiempo .imagen-flex {
   grid-area: imagen-flex;
   padding: 10px;
@@ -692,7 +694,7 @@ main {
   content: "";
   display: block;
   position: absolute;
-  top:  2.655rem;
+  top: 2.655rem;
   left: 50%;
   margin-left: -1px;
   width: 2px;
@@ -767,23 +769,23 @@ main {
 .presentacion-spa {
   padding: 50px 0 50px 0;
 }
-.presentacion-spa .container{
+.presentacion-spa .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: ;
   grid-template-areas: "left right";
   align-items: center;
 }
-.presentacion-spa .left{
+.presentacion-spa .left {
   grid-area: left;
 }
-.presentacion-spa .right{
+.presentacion-spa .right {
   grid-area: right;
 }
 .servicios p.title {
   text-align: left;
 }
-.presentacion-spa .left p.text{
+.presentacion-spa .left p.text {
   text-align: left;
 }
 
@@ -800,7 +802,7 @@ main {
   grid-template-areas: "imagen-left right";
   justify-items: center;
 }
-.toma-turno .imagen-left{
+.toma-turno .imagen-left {
   grid-area: imagen-left;
 }
 .toma-turno .right {
@@ -809,7 +811,6 @@ main {
 .toma-turno p.text {
   text-align: left;
 }
-
 
 /* ---------PORTFOLIO------------ */
 
@@ -981,37 +982,38 @@ footer a {
 
   /* linea del tiempo */
 
-  .line-divider{
+  .line-divider {
     position: relative;
     padding: 25px 20px 0;
   }
   .linea-tiempo .item {
-    grid-template-columns:;
+    grid-template-columns: ;
     grid-template-rows: ;
     grid-template-areas: "line-divider line-divider";
   }
 
   /* precios */
 
-  .pricing .container{
+  .pricing .container {
     grid-template-columns: 1fr;
     grid-template-rows: ;
-    grid-template-areas: "title"
-                         "basic-package"
-                         "advanced-package"
-                         "pro-package";
-      align-items: center;
+    grid-template-areas:
+      "title"
+      "basic-package"
+      "advanced-package"
+      "pro-package";
+    align-items: center;
   }
 
   /* servicios */
 
-  .toma-turno .container{
+  .toma-turno .container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "imagen-left"
-                         "right";
+    grid-template-areas:
+      "imagen-left"
+      "right";
   }
-
 }
 
 @media screen and (max-width: 700px) {
@@ -1026,7 +1028,8 @@ footer a {
   }
   header .responsive-menu {
     display: block;
-    position: absolute;
+    position: relative;
+    overflow: hidden;
     right: 0;
     background-color: transparent;
     border: 0;
@@ -1039,6 +1042,99 @@ footer a {
     transition: all 0s ease;
   }
   header .menu-nav {
+    display: none;
+  }
+
+  .wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+    background: #000;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .wrapper {
+    clip-path: circle(75%);
+  }
+  .menu-btn {
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    /* left: 20px; */
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+    background: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn {
+    color: #fff;
+  }
+  #active:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  .wrapper ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  .wrapper ul li {
+    margin: 15px 0;
+  }
+  .wrapper ul li a {
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    border-radius: 50px;
+    background: #000;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+  }
+  .wrapper ul li a:after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top: -5%; /* if the font is 'Oswald'*/
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: rotate 1.5s linear infinite;
+    transition: transform 0.3s ease;
+  }
+  .wrapper ul li a:hover:after {
+    transform: scaleY(1);
+  }
+  .wrapper ul li a:hover {
+    color: #fff;
+  }
+  input[type="checkbox"] {
     display: none;
   }
 
@@ -1111,13 +1207,14 @@ footer a {
       "mail-contact"
       "map-contact";
   }
-  
+
   /* servicios */
 
-  .presentacion-spa .container{
+  .presentacion-spa .container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "left"
-                         "right";
+    grid-template-areas:
+      "left"
+      "right";
   }
 }
