@@ -8,6 +8,10 @@
   --c-primary: #f69100;
   --c-secondary: #f8f8f8;
   --c-hover: #222;
+
+  /* ANIMACIONES */
+
+  --animate-delay: 0.5s;
 }
 
 html {
