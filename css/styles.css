@@ -1067,7 +1067,7 @@ footer a {
   .menu-btn {
     position: absolute;
     z-index: 2;
-    right: 20px;
+    right: 5%;
     /* left: 20px; */
     /* top: 20px; */
     height: 50px;
@@ -1106,7 +1106,7 @@ footer a {
     text-decoration: none;
     font-size: 30px;
     font-weight: 500;
-    padding: 5px 30px;
+    padding: 5px 25px;
     color: #fff;
     border-radius: 50px;
     background: #000;
@@ -1118,8 +1118,7 @@ footer a {
     position: absolute;
     content: "";
     background: #fff;
-    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-    /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+    border: #000;
     width: 104%;
     height: 110%;
     left: -2%;
