@@ -155,13 +155,14 @@ iframe {
 
 /* HEADER */
 
-/* header.sticky {
+header.sticky {
   position: fixed;
   z-index: 7;
   top: 0;
   width: 100%;
   background-color: ;
-} */
+}
+
 header#page-header {
   grid-area: header;
   height: auto;
@@ -170,7 +171,7 @@ header#page-header {
   background-color: transparent;
   position: absolute;
   width: 100%;
-  top: 0px;
+  top: 0;
   z-index: 6;
 }
 header#page-header .container {
@@ -899,6 +900,10 @@ footer a {
     grid-template-areas:
       "item-formulario"
       "item-map";
+  }
+
+  .contacto-form .item-formulario .bg{
+    padding: 1.5rem;
   }
 
   .contacto-form .container .item-formulario .flex {
