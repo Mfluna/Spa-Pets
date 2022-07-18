@@ -81,9 +81,8 @@ iframe {
   line-height: 1.3;
   padding: 10px 0px;
   text-transform: capitalize;
-  animation: fadeIn; 
+  animation: fadeIn;
   animation-duration: 2.5s;
-
 }
 .title-flex {
   font-size: 24px;
@@ -254,7 +253,6 @@ main {
   grid-area: text-left;
 }
 .spa-home .container .text-left .bg {
-
 }
 .spa-home.bg-principal {
   display: inline-flex;
@@ -625,22 +623,53 @@ main {
   padding: 50px 0 50px 0;
   background-color: #fff;
 }
-.linea-tiempo .flex {
+.linea-tiempo .item {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: ;
+  grid-template-areas: "imagen-flex line divider date";
 }
-.linea-tiempo .flex {
-  flex-wrap: nowrap;
-  flex-direction: row;
+.linea-tiempo {
 }
-.linea-tiempo .flex .imagen-flex {
+.linea-tiempo .imagen-flex {
   padding: 10px;
 }
-.linea-tiempo .flex .imagen-flex img {
+.linea-tiempo .imagen-flex img {
   width: 397px;
   height: auto;
 }
-.linea-tiempo .flex .date {
+.line-divider {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.563rem;
+}
+.linea-tiempo .date {
   padding: 0 10px 0 10px;
   max-width: 500px;
+}
+.linea-tiempo .line-divider::before {
+  content: "";
+  display: block;
+  width: 0.938rem;
+  height: 0.938rem;
+  border: 2px solid var(--c-primary);
+  border-radius: 50%;
+}
+.linea-tiempo .line-divider::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 70vh;
+  background: var(--c-primary);
+  min-height: 6.25rem;
 }
 
 /* PRICING */
@@ -651,23 +680,28 @@ main {
 .pricing h2.title {
   text-align: center;
 }
-.pricing ul.flex {
-  grid-gap: 50px;
-  padding: 20px;
+.pricing .container{
+  display: grid;
 }
-.pricing ul.flex .basic-package {
+.pricing ul.precios-spa {
+  display: grid;
+  grid-template-columns: ;
+  grid-template-rows: ;
+  grid-template-areas: "basic-package advanced-package pro-package";
 }
-.pricing ul.flex .bg {
+.pricing ul.precios-spa .basic-package {
+}
+.pricing ul.precios-spa .bg {
   padding: 30px;
 }
-.pricing ul.flex p.title-flex {
+.pricing ul.precios-spa p.title-flex {
 }
-.pricing ul.flex p.pricing-basic {
+.pricing ul..precios-spa p.pricing-basic {
 }
-.pricing ul.flex p.text-flex {
+.pricing ul.precios-spa p.text-flex {
   padding: 10px 10px 10px 0;
 }
-.pricing ul.flex .basic-package .btn {
+.pricing ul.precios-spa .basic-package .btn {
 }
 
 /* QUIENES SOMOS */
@@ -675,39 +709,31 @@ main {
 .quienes-somos {
   padding: 50px 0 50px 0;
 }
+.quienes-somos .container{
+  display: grid;
+  grid-template-columns: ;
+  grid-template-rows: ;
+  grid-template-areas: "title title"
+                        "info-fundadora info-peluquero"
+                        "info-estilista info-gerente";
+}
 .quienes-somos h4.title {
   text-align: center;
   margin-bottom: 50px;
 }
-.quienes-somos ul.flex {
-  display: flex;
-  justify-content: space-between;
+.quienes-somos .team.info-fundadora{
+  grid-area: info-fundadora;
 }
-.quienes-somos ul.flex .bg {
+.quienes-somos .team.info-peluquero {
+  grid-area: info-peluquero;
 }
-.quienes-somos ul.flex li {
-  display: flex;
-  gap: 30px;
+.quienes-somos .team.info-estilista{
+  grid-area: info-estilista;
 }
-.quienes-somos ul.flex li figure {
+.quienes-somos .team.info-gerente{
+  grid-area: info-gerente;
 }
-.quienes-somos ul.flex li figure image {
-}
-.quienes-somos ul.flex li .datos-team {
-}
-.quienes-somos ul.flex li .datos-team .title-flex {
-  padding-bottom: 5px;
-}
-.quienes-somos ul.flex li .datos-team .subtitle-flex {
-}
-.quienes-somos ul.flex li .datos-team .text-flex {
-  max-width: 400px;
-}
-.quienes-somos ul.flex li .datos-team .numero-contacto {
-}
-.quienes-somos ul.flex li .datos-team .numero-contacto img {
-  height: 15px;
-}
+
 
 /* ---------SERVICIOS------------ */
 
@@ -912,10 +938,10 @@ footer a {
     grid-template-areas:
       "item-formulario"
       "item-map";
-      padding: initial;
+    padding: initial;
   }
 
-  .contacto-form .item-formulario .bg{
+  .contacto-form .item-formulario .bg {
     padding: 1.5rem;
   }
 
@@ -923,7 +949,6 @@ footer a {
     display: block;
     width: 100%;
   }
-
 
   /* FOOTER */
 
@@ -937,8 +962,6 @@ footer a {
       "item-redes"
       "copy-right";
   }
-
-  
 }
 
 @media screen and (max-width: 700px) {
@@ -1019,22 +1042,23 @@ footer a {
 
   .bg-principal {
     background-image: none;
-    background-color: var(--c-fourth); 
+    background-color: var(--c-fourth);
   }
 
   .bg-principal .container .text-left .title {
-    font-size: 2.5rem
+    font-size: 2.5rem;
   }
 
   .redes-sociales {
     display: none;
   }
 
-  .contacto-icons .container{
+  .contacto-icons .container {
     grid-template-columns: ;
     grid-template-rows: ;
-    grid-template-areas: "phone-contact"
-    "mail-contact" 
-    "map-contact";
+    grid-template-areas:
+      "phone-contact"
+      "mail-contact"
+      "map-contact";
   }
 }
