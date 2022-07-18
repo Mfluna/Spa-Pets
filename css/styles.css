@@ -178,8 +178,7 @@ header#page-header .container {
   padding: 0;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "image-logo menu-nav";
+  grid-template-areas: "image-logo menu-nav";
   justify-items: center;
   max-width: initial;
   column-gap: 9rem;
@@ -448,8 +447,7 @@ main {
   display: grid;
   grid-template-columns: ;
   grid-template-rows: ;
-  grid-template-areas:
-    "item-formulario item-map";
+  grid-template-areas: "item-formulario item-map";
   justify-items: center;
   width: auto;
   align-items: center;
@@ -903,7 +901,7 @@ footer a {
       "item-map";
   }
 
-  .contacto-form .container .item-formulario .flex{
+  .contacto-form .container .item-formulario .flex {
     display: block;
     width: 100%;
   }
@@ -923,7 +921,6 @@ footer a {
 }
 
 @media screen and (max-width: 700px) {
-
   /* HEADER */
 
   header .responsive-menu > div {
@@ -953,12 +950,12 @@ footer a {
 
   /* SPA HOME */
 
-  .spa-home .redes-sociales{
-  top: 13%;
+  .spa-home .redes-sociales {
+    top: 13%;
   }
   .spa-home .redes-sociales ul {
     display: flex;
-}
+  }
 
   /* ITEMS GARANTIZADO */
 
@@ -996,6 +993,11 @@ footer a {
       "item-last";
     /* gap: 5%; */
   }
+}
 
-  
+/* ANIMACIONES NUEVAS */
+
+h1:hover {
+  color: #f69100;
+  font-weight: bold;
 }
