@@ -133,6 +133,7 @@ iframe {
 
 .flex {
   display: flex;
+  gap: 5%;
   /* flex-wrap: wrap; */
 }
 .redes-sociales {
@@ -450,6 +451,24 @@ main {
   pointer-events: none;
 }
 
+/* servicios */
+
+.servicios-spa{
+
+}
+.servicios-spa .container{
+  display: grid;
+  grid-template-columns: ;
+  grid-template-rows: ;
+  grid-template-areas: ;
+  justify-items: center;
+}
+.servicios-spa .container .galeria{}
+.servicios-spa .container .galeria .flex{
+  gap: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 /* CONTACTO FORMULARIO */
 
 .contacto-form {
@@ -624,14 +643,22 @@ main {
   background-color: #fff;
 }
 .linea-tiempo .item {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 67px 2px;
+  margin-bottom: -25px;
   display: grid;
   grid-template-columns: 1fr 0.5fr 1fr;
-  grid-template-rows: ;
-  grid-template-areas: "imagen-flex line divider date";
+  grid-template-rows: auto;
+  grid-template-areas: "imagen-flex line-divider date";
 }
-.linea-tiempo {
+.linea-tiempo .item.box-first {
+
 }
+.linea-tiempo .item.box-secondary{}
+.linea-tiempo .item.box-terciary{}
 .linea-tiempo .imagen-flex {
+  grid-area: imagen-flex;
   padding: 10px;
 }
 .linea-tiempo .imagen-flex img {
@@ -640,6 +667,7 @@ main {
 }
 .line-divider {
   /* position: absolute; */
+  grid-area: line-divider;
   top: 0;
   left: 0;
   display: flex;
@@ -650,6 +678,7 @@ main {
 .linea-tiempo .date {
   padding: 0 10px 0 10px;
   max-width: 500px;
+  grid-area: date;
 }
 .linea-tiempo .line-divider::before {
   content: "";
@@ -663,7 +692,7 @@ main {
   content: "";
   display: block;
   position: absolute;
-  top: 2.5rem;
+  top:  2.655rem;
   left: 50%;
   margin-left: -1px;
   width: 2px;
@@ -676,103 +705,86 @@ main {
 
 .pricing {
   background-color: #f5f6fa;
+  padding: 2rem 0 2rem 0;
 }
 .pricing h2.title {
   text-align: center;
+  grid-area: title;
 }
-.pricing .container{
+.pricing .container {
   display: grid;
-}
-.pricing ul.precios-spa {
-  display: grid;
-  grid-template-columns: ;
-  grid-template-rows: ;
-  grid-template-areas: "basic-package advanced-package pro-package";
-}
-.pricing ul.precios-spa .basic-package {
-}
-.pricing ul.precios-spa .bg {
-  padding: 30px;
-}
-.pricing ul.precios-spa p.title-flex {
-}
-.pricing ul..precios-spa p.pricing-basic {
-}
-.pricing ul.precios-spa p.text-flex {
-  padding: 10px 10px 10px 0;
-}
-.pricing ul.precios-spa .basic-package .btn {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-areas:
+    "title title title"
+    "basic-package advanced-package pro-package";
 }
 
+.pricing .precios-spa .basic-package {
+  grid-area: basic-package;
+}
+.pricing .precios-spa .advanced-package {
+  grid-area: advanced-package;
+}
+.pricing .precios-spa .pro-package {
+  grid-area: pro-package;
+}
 /* QUIENES SOMOS */
 
 .quienes-somos {
   padding: 50px 0 50px 0;
 }
-.quienes-somos .container{
+.quienes-somos .container {
   display: grid;
-  grid-template-columns: ;
-  grid-template-rows: ;
-  grid-template-areas: "title title"
-                        "info-fundadora info-peluquero"
-                        "info-estilista info-gerente";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.5fr 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "info-fundadora info-peluquero"
+    "info-estilista info-gerente";
+  justify-items: center;
 }
 .quienes-somos h4.title {
   text-align: center;
   margin-bottom: 50px;
+  grid-area: title;
 }
-.quienes-somos .team.info-fundadora{
+.quienes-somos .team.info-fundadora {
   grid-area: info-fundadora;
 }
 .quienes-somos .team.info-peluquero {
   grid-area: info-peluquero;
 }
-.quienes-somos .team.info-estilista{
+.quienes-somos .team.info-estilista {
   grid-area: info-estilista;
 }
-.quienes-somos .team.info-gerente{
+.quienes-somos .team.info-gerente {
   grid-area: info-gerente;
 }
-
 
 /* ---------SERVICIOS------------ */
 
 .presentacion-spa {
   padding: 50px 0 50px 0;
 }
-.presentacion-spa ul.flex {
-  display: flex;
+.presentacion-spa .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: ;
+  grid-template-areas: "left right";
   align-items: center;
 }
-.presentacion-spa ul.flex li {
+.presentacion-spa .left{
+  grid-area: left;
 }
-.presentacion-spa ul.flex li p {
+.presentacion-spa .right{
+  grid-area: right;
+}
+.servicios p.title {
   text-align: left;
 }
-.presentacion-spa ul.flex li.left {
-  padding: 30px 2px;
-}
-.presentacion-spa ul.flex li.right {
-  max-width: 577px;
-}
-.presentacion-spa ul.flex li.right figure {
-  display: flex;
-  justify-content: center;
-}
-.presentacion-spa ul.flex li.right figure img {
-  /* width: 82%; */
-  /* max-width: 100%; */
-  height: auto;
-}
-
-.servicios h2.title {
-  text-align: center;
-}
-.servicios p.text {
-}
-.servicios .galeria {
-}
-.servicios .flex .galeria ul.flex {
+.presentacion-spa .left p.text{
+  text-align: left;
 }
 
 /* TOMA TURNO */
@@ -781,21 +793,23 @@ main {
   background-color: #fff;
   padding: 50px 0 50px 0;
 }
-.toma-turno .flex {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
+.toma-turno .container {
+  display: grid;
+  grid-template-rows: ;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "imagen-left right";
+  justify-items: center;
 }
-.toma-turno .flex h3.title {
+.toma-turno .imagen-left{
+  grid-area: imagen-left;
 }
-.toma-turno .flex h3.title span {
+.toma-turno .right {
+  grid-area: right;
 }
-.toma-turno .flex p.text {
+.toma-turno p.text {
   text-align: left;
 }
-.toma-turno .flex .right {
-  max-width: 500px;
-}
+
 
 /* ---------PORTFOLIO------------ */
 
@@ -962,6 +976,42 @@ footer a {
       "item-redes"
       "copy-right";
   }
+
+  /* SOBRE NOSOTROS */
+
+  /* linea del tiempo */
+
+  .line-divider{
+    position: relative;
+    padding: 25px 20px 0;
+  }
+  .linea-tiempo .item {
+    grid-template-columns:;
+    grid-template-rows: ;
+    grid-template-areas: "line-divider line-divider";
+  }
+
+  /* precios */
+
+  .pricing .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: ;
+    grid-template-areas: "title"
+                         "basic-package"
+                         "advanced-package"
+                         "pro-package";
+      align-items: center;
+  }
+
+  /* servicios */
+
+  .toma-turno .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "imagen-left"
+                         "right";
+  }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -1060,5 +1110,14 @@ footer a {
       "phone-contact"
       "mail-contact"
       "map-contact";
+  }
+  
+  /* servicios */
+
+  .presentacion-spa .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "left"
+                         "right";
   }
 }
