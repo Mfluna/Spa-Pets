@@ -12,6 +12,7 @@
   /* ANIMACIONES */
 
   --animate-delay: 0.5s;
+  --animate-duration: 800ms;
 }
 
 html {
@@ -246,6 +247,9 @@ main {
 }
 .spa-home .container .text-left {
   grid-area: text-left;
+}
+.spa-home .container .text-left .bg {
+  
 }
 .spa-home.bg-principal {
   display: inline-flex;
@@ -1002,11 +1006,4 @@ footer a {
       "item-last";
     /* gap: 5%; */
   }
-}
-
-/* ANIMACIONES NUEVAS */
-
-h1:hover {
-  color: #f69100;
-  font-weight: bold;
 }
