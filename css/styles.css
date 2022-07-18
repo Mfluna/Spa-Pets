@@ -1093,10 +1093,11 @@ footer a {
   .wrapper ul {
     position: absolute;
     top: 50%;
+    width: max-content;
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
-    text-align: center;
+    text-align: left;
   }
   .wrapper ul li {
     margin: 15px 0;
@@ -1104,7 +1105,7 @@ footer a {
   .wrapper ul li a {
     color: none;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 500;
     padding: 5px 25px;
     color: #fff;
