@@ -386,6 +386,10 @@ main {
 
 /* ITEMS GARANTIZADO */
 
+section#items-garantizado{
+  padding: 3rem 0 3rem;
+}
+
 .items-garantizado .row {
   align-items: center;
 }
@@ -529,7 +533,11 @@ main {
     margin: 0 auto;
   }
 }
-
+@media screen and (max-width: 460px){
+  .card-box .item-card{
+    margin: 1rem;
+  }
+}
 /* SERVICIOS */
 
 .servicios {
