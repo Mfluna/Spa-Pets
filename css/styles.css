@@ -68,6 +68,8 @@ iframe {
   width: 100%;
 }
 
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
 .container {
   width: 100%;
   height: auto;
@@ -384,37 +386,148 @@ main {
 
 /* ITEMS GARANTIZADO */
 
-.items-garantizado {
-  background-color: #ffff;
-  padding: 50px 0 50px 0;
+.items-garantizado .row {
+  align-items: center;
 }
-.items-garantizado .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "item-one item-two"
-    "item-three item-four";
+
+.quality-team {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.items-garantizado .item-one {
-  grid-area: item-one;
+.quality-team .card-box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-.items-garantizado .item-two {
-  grid-area: item-two;
+.card-box .item-card {
+  flex: 0 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  border-radius: 1rem;
+  margin: 1.9rem;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 265px;
+  transition: 0.7s;
 }
-.items-garantizado .item-three {
-  grid-area: item-three;
+
+.card-box .item-card:hover {
+  background: var(--c-primary);
+  color: #fff;
+  transform: scale(1.1);
+  z-index: 9;
 }
-.items-garantizado .item-four {
-  grid-area: item-four;
+
+.card-box .item-card:hover::before {
+  background: rgb(85 108 214 / 10%);
 }
-.items-garantizado .flex .item .icon-title img {
+
+.card-box .item-card:hover .title-flex,
+.card-box .item-card:hover .text-flex p {
+  color: #fff;
 }
-.items-garantizado .item .icon-title .icono-calificado {
+
+.card-box .item-card:before {
+  content: "";
+  position: absolute;
+  background: rgb(85 108 214 / 5%);
+  width: 170px;
+  height: 400px;
+  z-index: -1;
+  transform: rotate(42deg);
+  right: -56px;
+  top: -23px;
+  border-radius: 35px;
 }
-.items-garantizado .item .icon-title .icono-calificado img {
+
+.item-card .icon-calificated {
+}
+
+.item-card p.title-flex {
+  color: #212121;
+  font-size: 1.3rem;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.item-card .text-flex p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.our_solution_content p {
+}
+
+.hover_color_bubble {
+  position: absolute;
+  background: rgb(54 81 207 / 15%);
+  width: 100rem;
+  height: 100rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 16rem;
+  border-radius: 50%;
+  transform: rotate(-36deg);
+  left: -18rem;
+  transition: 0.7s;
+}
+
+.card-box .item-card:hover .hover_color_bubble {
+  top: 0rem;
+}
+
+.card-box .item-card .icon-calificated {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-box .item-card .icon-calificated img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/*start media query*/
+@media screen and (min-width: 320px) {
+  .sol_card_top_3 {
+    position: relative;
+    top: 0;
+  }
+
+  .quality-team {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .quality-team .card-box {
+    flex: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .quality-team .card-box {
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sol_card_top_3 {
+    position: relative;
+    top: -3rem;
+  }
+  .quality-team {
+    /* width: 50%; */
+    margin: 0 auto;
+  }
 }
 
 /* SERVICIOS */
@@ -506,6 +619,9 @@ main {
 .contacto-form .container .item-map {
   grid-area: item-map;
   width: 100%;
+}
+.contacto-form .container .item-map map iframe {
+  border-radius: 0.3rem;
 }
 .contacto-form .item-formulario .bg {
   padding: 50px;
@@ -949,13 +1065,13 @@ main {
   position: relative;
 }
 .footer-20192 .cta h2,
-.footer-20192 .cta h3 {
+.footer-20192 .cta h6 {
   line-height: 1.5;
 }
-.footer-20192 .cta h3 {
+.footer-20192 .cta h6 {
   font-size: 20px;
 }
-footer .row{
+footer .row {
   text-align: center;
 }
 
@@ -963,6 +1079,7 @@ footer .row{
 .cookie {
   width: 420px;
   height: auto;
+  display: none;
   background-color: #fff;
   position: fixed;
   bottom: 88px;
@@ -1355,5 +1472,3 @@ footer .row{
     left: 0;
   }
 }
-
-
