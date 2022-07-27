@@ -5,11 +5,11 @@
 }
 :root {
   /* COLORS */
-  --c-primary: #f69100;
-  --c-secondary: #f8f8f8;
-  --c-terciary: #151515;
-  --c-fourth: #f1f1f1;
-  --c-hover: #222;
+  --c-primary: #EB5E28;
+  --c-secondary: #FFFCF2;
+  --c-terciary: #252422;
+  --c-fourth: #CCC5B9;
+  --c-hover: #403D39;
 
   /* ANIMACIONES */
 
@@ -31,7 +31,7 @@ body {
 a,
 a:hover {
   text-decoration: none;
-  color: rgb(41, 41, 58);
+  color: var(--c-hover);
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
@@ -221,7 +221,7 @@ header#page-header li.menu-item a {
   font-size: 1rem;
 }
 header#page-header li.menu-item a:hover {
-  color: var(--c-primary);
+  color: var(--c-fourth);
   border-radius: 6px;
   border: 0px solid transparent;
 }
@@ -329,7 +329,8 @@ main {
 .sobre-nosotros {
   padding: 50px 0 50px 0;
   /* margin: 50px 0 50px 0; */
-  background-color: #f8f8f8;
+  background-color: var(--c-fourth);
+  color: var(--c-secondary);
 }
 .sobre-nosotros .title {
   text-align: center;
@@ -337,6 +338,7 @@ main {
 }
 .sobre-nosotros .text {
   grid-area: text;
+  
 }
 .sobre-nosotros .container {
   display: grid;
@@ -358,11 +360,7 @@ main {
 .cuidado-calificado {
   padding: 50px 0 50px 0;
   background: var(--c-primary);
-  background: linear-gradient(
-    312deg,
-    rgba(246, 145, 0, 0) 0%,
-    rgba(251, 183, 95, 1) 0%
-  );
+
 }
 .cuidado-calificado .container {
   display: grid;
@@ -542,7 +540,7 @@ section#items-garantizado{
 
 .servicios {
   padding: 50px 0 50px 0;
-  background-color: #f5f6fa;
+  background-color: var(--c-secondary);
 }
 
 .servicios .container {
@@ -1044,7 +1042,7 @@ section#items-garantizado{
   display: inline-block;
   margin: 0;
   padding: 0;
-  background-color: var(--c-primary);
+  background-color: var(--c-fourth);
   color: #fff;
 }
 .footer-20192 .social li a > span {
