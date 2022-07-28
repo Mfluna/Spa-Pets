@@ -170,16 +170,6 @@ iframe {
   width: 12%;
 }
 
-/* HEADER */
-
-/* header.sticky {
-  position: fixed;
-  z-index: 7;
-  top: 0;
-  width: 100%;
-  background-color: ;
-} */
-
 header#page-header {
   grid-area: header;
   height: auto;

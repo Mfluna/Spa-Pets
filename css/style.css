@@ -1,0 +1,39 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+header#page-header {
+  background-color: #252422;
+  position: fixed;
+  grid-area: header;
+  height: auto;
+  padding: 1.25rem;
+  display: block;
+  width: 100%;
+  top: 0;
+  z-index: 6; }
+  header#page-header .container {
+    display: grid;
+    padding: 0;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image-logo menu-nav";
+    justify-items: center;
+    max-width: initial;
+    column-gap: 9rem;
+    align-items: center; }
+  header#page-header .menu-nav {
+    grid-area: menu-nav; }
+  header#page-header .menu-item {
+    display: inline-block; }
+  header#page-header .menu-item a {
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    font-size: 1rem; }
