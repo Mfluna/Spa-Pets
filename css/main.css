@@ -1,0 +1,159 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+.bg-principal {
+  padding-top: 9.375rem;
+  padding-bottom: 3.125rem;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  background-image: url(../img/bg-imagen-02.jpg);
+  background-position: center left; }
+  .bg-principal .container {
+    display: grid;
+    grid-template-areas: "title-bg" "text-left"; }
+  .bg-principal .text-left {
+    grid-area: text-left; }
+  .bg-principal .text-left .title {
+    text-shadow: 0 0 15px #6e6e6e;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    color: #29293a;
+    font-size: 3.625rem; }
+  .bg-principal .text-left ul {
+    display: flex;
+    gap: 5%;
+    color: #29293a; }
+  .bg-principal .text-left ul > li .redirection::after {
+    content: "";
+    display: inline-block;
+    border: solid #29293a;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    -webkit-transform: translateX(60%) rotate(-47deg); }
+  .bg-principal .text-left ul .url-actual {
+    margin-left: 10px;
+    text-transform: capitalize; }
+  .bg-principal .line p {
+    text-transform: uppercase;
+    font-size: 0.75rem; }
+  .bg-principal p.title-bg {
+    color: #29293a;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 1.5;
+    padding-left: 36rem;
+    font-family: "Oswald", sans-serif; }
+  .bg-principal p.title-bg::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.8em;
+    width: 1.875rem;
+    border-bottom: 1px solid; }
+
+/* CONTACTO ICONS */
+.contacto-icons {
+  padding: 3.125rem 0 3.125rem 0; }
+  .contacto-icons .container {
+    display: grid;
+    grid-template-areas: "phone-contact mail-contact map-contact";
+    justify-items: center; }
+  .contacto-icons .container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .contacto-icons .phone-contact {
+    grid-area: phone-contact; }
+  .contacto-icons .mail-contact {
+    grid-area: mail-contact; }
+  .contacto-icons .map-contact {
+    grid-area: map-contact; }
+    .contacto-icons .map-contact .container figure img {
+      padding: 1rem; }
+
+.contacto-form {
+  padding: 3.125rem 0 3.125rem 0; }
+  .contacto-form .container {
+    display: grid;
+    grid-template-areas: "item-formulario item-map";
+    justify-items: center;
+    width: auto;
+    align-items: center;
+    column-gap: 5%; }
+  .contacto-form .item-formulario {
+    grid-area: item-formulario; }
+  .contacto-form .item-map {
+    grid-area: item-map;
+    width: 100%; }
+  .contacto-form .item-map map iframe {
+    border-radius: 0.3rem; }
+  .contacto-form .item-formulario .bg {
+    padding: 3.125rem;
+    background-color: #f1f1f1;
+    border-radius: 0.438rem; }
+  .contacto-form .item-formulario label .flex > div {
+    padding: 0.625rem 0.625rem 0.625rem 0; }
+  .contacto-form .form-input {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 19px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2c343b;
+    background-color: #FFF;
+    background-image: none;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    transition: 0.3s ease-in-out;
+    border: 1px solid transparent; }
+  .contacto-form textarea.form-input {
+    height: 9.375rem;
+    min-height: 48px;
+    max-height: 255px;
+    resize: vertical; }
+  .contacto-form .btn-formulario {
+    padding-top: 1.875rem; }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+header#page-header {
+  background-color: #252422;
+  position: fixed;
+  grid-area: header;
+  height: auto;
+  padding: 1.25rem;
+  display: block;
+  width: 100%;
+  top: 0;
+  z-index: 6; }
+  header#page-header .container {
+    display: grid;
+    padding: 0;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image-logo menu-nav";
+    justify-items: center;
+    max-width: initial;
+    column-gap: 9rem;
+    align-items: center; }
+  header#page-header .menu-nav {
+    grid-area: menu-nav; }
+  header#page-header .menu-item {
+    display: inline-block; }
+  header#page-header .menu-item a {
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: Oswald, sans-serif;
+    color: #fff;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    font-size: 1rem; }
+  header#page-header .menu-item a:hover {
+    color: #CCC5B9;
+    border-radius: 6px;
+    border: 0px solid transparent; }

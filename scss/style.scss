@@ -1,6 +1,7 @@
 @import "base/variables";
 @import "base/listas";
 @import "base/mixin";
+@import "utilities/contacto";
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 * {
@@ -47,5 +48,10 @@ header#page-header{
         letter-spacing: 0.08em;
         font-weight: 500;
         font-size: 1rem;
+    }
+    .menu-item a:hover{
+        color: $color-cuarto;
+        border-radius: 6px;
+        border: 0px solid transparent;
     }
 }

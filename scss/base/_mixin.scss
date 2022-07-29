@@ -1,16 +1,17 @@
-@mixin .flex {
+@mixin flex {
   display: flex;
   gap: 5%;
 }
-@mixin .container {
-  width: 100%;
-  height: auto;
-  max-width: 1200px;
-  position: relative;
-  z-index: 5;
-  padding-right: 40px;
-  padding-left: 40px;
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
+@mixin a {
+  text-decoration: none;
+  color: var(--c-hover);
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+@mixin section-p {
+  padding: 3.125rem 0 3.125rem 0 ;
+}
+@mixin padding-form {
+  padding: 0.625rem 0.625rem 0.625rem 0 ;
 }
