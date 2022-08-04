@@ -9,8 +9,7 @@
   background-position: center left; }
   .bg-principal .container {
     display: grid;
-    grid-template-areas: "title-bg"
- "text-left"; }
+    grid-template-areas: "title-bg" "text-left"; }
   .bg-principal .text-left {
     grid-area: text-left; }
   .bg-principal .text-left .title {
