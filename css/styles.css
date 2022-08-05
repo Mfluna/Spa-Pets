@@ -316,18 +316,7 @@ main {
   padding: 16px;
 }
 
-/* SOBRE NOSOTROS */
 
-.sobre-nosotros {
-  padding: 50px 0 50px 0;
-  /* margin: 50px 0 50px 0; */
-  background-color: var(--c-fourth);
-  color: var(--c-secondary);
-}
-.sobre-nosotros .title {
-  text-align: center;
-  grid-area: title;
-}
 .sobre-nosotros .text {
   grid-area: text;
 }

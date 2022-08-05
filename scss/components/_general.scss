@@ -1,0 +1,136 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: nth($list: $c-basics, $n: 6);
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: $color-hover;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+a,
+.btn,
+button,
+input,
+textarea {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+input,
+textarea {
+  font-family: "Work Sans", sans-serif;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+img {
+  max-width: 100%;
+}
+.redes-sociales li > a > img {
+  max-width: initial;
+}
+.redes-footer li > a > img {
+  max-width: initial;
+}
+iframe {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  position: relative;
+  z-index: 5;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+.title {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.3;
+  padding: 10px 0px;
+  text-transform: capitalize;
+  animation-duration: 2.5s;
+}
+.title-flex {
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+  padding: 10px;
+  text-transform: capitalize;
+  padding-left: 0;
+}
+.subtitle-flex {
+  padding: 0px 0 30px 0;
+  text-transform: capitalize;
+}
+.text {
+  text-align: center;
+  max-width: 786px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: auto;
+  padding: 10px 0;
+}
+.text-flex {
+  padding: 10px;
+}
+.btn {
+  background-color: $color-principal;
+  font-size: 1rem;
+  padding: 0.625rem 2.188rem;
+  display: inline-block;
+  border-radius: 6px;
+  border: 0px solid transparent;
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn a:hover {
+  color: nth($list: $c-basics , $n: 1);
+  opacity: 3;
+}
+.flex {
+  display: flex;
+  gap: 5%;
+}
+.redes-sociales {
+  position: absolute;
+  z-index: 3;
+  right: -6rem;
+}
+.redes-sociales li {
+  margin-top: 5px;
+}
+.redes-sociales li a {
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 2px nth($list: $c-basics, $n: 6);
+  background-color: nth($list: $c-basics, $n: 1);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.line {
+  position: relative;
+  border-bottom: 1px solid nth($list: $c-basics, $n: 7);
+  width: 12%;
+}

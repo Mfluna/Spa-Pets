@@ -1,63 +1,7 @@
 // CONTACTO
 .bg-principal {
-  padding-top: 9.375rem;
-  padding-bottom: 3.125rem;
-  position: relative;
-  width: 100%;
-  color: #fff;
-  background-image: url(../img/bg-imagen-02.jpg);
-  background-position: center left;
-  .container {
-    display: grid;
-    grid-template-areas:
-      "title-bg"
-      "text-left";
-  }
-  .text-left {
-    grid-area: text-left;
-  }
-  .text-left .title {
-    text-shadow: 0 0 15px nth($list: $c-basics, $n: 3);
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    color: nth($list: $c-basics, $n: 4);
-    font-size: 3.625rem;
-  }
-  .text-left ul {
-    @include flex;
-    color: nth($list: $c-basics, $n: 4);
-  }
-  .text-left ul > li .redirection::after {
-    content: "";
-    display: inline-block;
-    border: solid nth($list: $c-basics, $n: 4);
-    border-width: 0 2px 2px 0;
-    padding: 3px;
-    -webkit-transform: translateX(60%) rotate(-47deg);
-  }
-  .text-left ul .url-actual {
-    margin-left: 10px;
-    text-transform: capitalize;
-  }
-  .line p {
-    text-transform: uppercase;
-    font-size: 0.75rem;
-  }
-  p.title-bg {
-    color: nth($list: $c-basics, $n: 4);
-    text-transform: uppercase;
-    position: relative;
-    line-height: 1.5;
-    padding-left: 36rem;
-    font-family: "Oswald", sans-serif;
-  }
-  p.title-bg::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.8em;
-    width: 1.875rem;
-    border-bottom: 1px solid;
+  @mixin bg-principal {
+    
   }
 }
 /* CONTACTO ICONS */
@@ -81,9 +25,9 @@
   }
   .map-contact {
     grid-area: map-contact;
-    .container figure img {
-      padding: 1rem;
-    }
+  }
+  .container figure img {
+    padding: 1rem;
   }
 }
 // CONTACTO FORMULARIO
@@ -137,7 +81,7 @@
     max-height: 255px;
     resize: vertical;
   }
-  .btn-formulario{
+  .btn-formulario {
     padding-top: 1.875rem;
   }
 }
