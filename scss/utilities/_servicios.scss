@@ -1,0 +1,62 @@
+// SERVICIOS
+.bg-principal {
+  @mixin bg-principal {
+  }
+}
+// Presentacion spa
+.presentacion-spa {
+  @include section-p;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    align-items: center;
+  }
+  .left {
+    grid-area: left;
+  }
+  .right {
+    grid-area: right;
+  }
+  .servicios p.title {
+    text-align: left;
+  }
+  .left p.text {
+    text-align: left;
+  }
+}
+// Servicio spa
+.servicios-spa {
+  @include section-p;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+  .container .galeria .flex {
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+// Toma turno
+.toma-turno {
+  background-color: nth($list: $c-basics, $n: 1);
+  @include section-p;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "imagen-left right";
+    justify-items: center;
+  }
+  .imagen-left {
+    grid-area: imagen-left;
+  }
+  .right {
+    grid-area: right;
+  }
+  p.text {
+    text-align: left;
+  }
+}

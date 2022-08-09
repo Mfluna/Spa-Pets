@@ -6,7 +6,7 @@
 .linea-tiempo {
   @include section-p;
   background-color: nth($list: $c-basics, $n: 1);
-  .linea-tiempo .item {
+  .item {
     position: relative;
     overflow: hidden;
     padding: 0 0 67px 2px;
@@ -62,7 +62,7 @@
 .pricing {
   background-color: #f5f6fa;
   @include section-p;
-  .pricing h2.title {
+  h2.title {
     text-align: center;
     grid-area: title;
   }
@@ -83,6 +83,9 @@
   .precios-spa .pro-package {
     grid-area: pro-package;
   }
+}
+@mixin cuidado-calificado {
+  
 }
 .quienes-somos {
   @include section-p;
