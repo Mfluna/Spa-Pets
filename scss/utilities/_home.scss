@@ -1,0 +1,202 @@
+.spa-home {
+  position: relative;
+  z-index: 3;
+  .container {
+    max-width: initial;
+    height: 100vh;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "text-left carousel";
+    justify-items: center;
+    align-items: center;
+    .text-left {
+      grid-area: text-left;
+      .redes-sociales {
+        position: absolute;
+        z-index: 3;
+        right: 1rem;
+        transform: translateY(50%);
+        ul {
+          list-style: none;
+          flex-direction: column;
+          li {
+            margin-top: 5px;
+            a {
+              border-radius: 50%;
+              box-shadow: 2px 2px 2px 2px #85858533;
+              background-color: #fff;
+              width: 25px;
+              height: 25px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 16px;
+            }
+          }
+        }
+      }
+      .bg {
+        h1.title {
+          font-size: 3rem;
+          span {
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .carousel.slide {
+      grid-area: carousel;
+    }
+  }
+}
+// Sobre nosotros
+.sobre-nosotros {
+  .container {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "text"
+      "btn-vermas";
+    justify-content: center;
+    justify-items: center;
+    .text {
+      grid-area: text;
+    }
+    .btn-vermas {
+      padding-top: 30px;
+      justify-self: center;
+      grid-area: btn-vermas;
+    }
+  }
+}
+#items-garantizado {
+  @include section-p;
+  .container {
+    .row {
+      align-items: center;
+      .quality-team {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .card-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .item-card {
+            flex: 0 50%;
+            background: #fff;
+            box-shadow: 0 2px 4px 0 #8890c333, 0 5px 15px 0 #252c6126;
+            border-radius: 1rem;
+            margin: 1.9rem;
+            padding: 10px 15px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            min-height: 265px;
+            transition: 0.7s;
+            .item-card:hover {
+              background: $color-principal;
+              color: #fff;
+              transform: scale(1.1);
+              z-index: 9;
+              .title-flex,
+              .text-flex p {
+                color: #fff;
+              }
+            }
+            .item-card:hover::before {
+              background: #556cd61a;
+            }
+            .item-card:before {
+              content: "";
+              position: absolute;
+              background: #556cd60d;
+              width: 170px;
+              height: 400px;
+              z-index: -1;
+              transform: rotate(42deg);
+              right: -56px;
+              top: -23px;
+              border-radius: 35px;
+            }
+            p.title-flex {
+              color: #212121;
+              font-size: 1.3rem;
+              margin-top: 13px;
+              margin-bottom: 13px;
+            }
+            .text-flex p {
+              font-size: 15px;
+              margin-bottom: 15px;
+            }
+            .hover_color_bubble {
+              position: absolute;
+              background: #3651cf26;
+              width: 100rem;
+              height: 100rem;
+              left: 0;
+              right: 0;
+              z-index: -1;
+              top: 16rem;
+              border-radius: 50%;
+              transform: rotate(-36deg);
+              left: -18rem;
+              transition: 0.7s;
+            }
+            .item-card:hover .hover_color_bubble {
+              top: 0rem;
+            }
+            .icon-calificated {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              background: #fff;
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .icon-calificated img {
+              width: 26px;
+              height: 26px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// cuidado calificado
+.cuidado-calificado {
+  .container {
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "title btn-precios";
+  }
+}
+// Servicios
+.servicios {
+  .container {
+    grid-template-areas:
+      "title title"
+      "text text"
+      "item-first item-last";
+    justify-content: center;
+    justify-items: center;
+    h4.title {
+      grid-area: title;
+    }
+    p.text {
+      grid-area: text;
+    }
+    .item-first {
+      grid-area: item-first;
+    }
+    .item-last {
+      grid-area: item-last;
+    }
+  }
+}

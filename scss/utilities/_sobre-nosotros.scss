@@ -1,71 +1,64 @@
-// SOBRE NOSOTROS
-.bg-principal {
-  @mixin bg-principal {
-  }
-}
 .linea-tiempo {
   @include section-p;
   background-color: nth($list: $c-basics, $n: 1);
-  .item {
-    position: relative;
-    overflow: hidden;
-    padding: 0 0 67px 2px;
-    margin-bottom: -25px;
-    display: grid;
-    grid-template-columns: 1fr 0.5fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "imagen-flex line-divider date";
-  }
-  .imagen-flex {
-    grid-area: imagen-flex;
-    padding: 10px;
-  }
-  .imagen-flex img {
-    width: 397px;
-    height: auto;
-  }
-  .line-divider {
-    grid-area: line-divider;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1.563rem;
-  }
-  .date {
-    padding: 0 10px 0 10px;
-    max-width: 500px;
-    grid-area: date;
-  }
-  .line-divider::before {
-    content: "";
-    display: block;
-    width: 0.938rem;
-    height: 0.938rem;
-    border: 2px solid $color-principal;
-    border-radius: 50%;
-  }
-  .line-divider::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 2.655rem;
-    left: 50%;
-    margin-left: -1px;
-    width: 2px;
-    height: 70vh;
-    background: $color-principal;
-    min-height: 6.25rem;
+  .container {
+    .item {
+      position: relative;
+      overflow: hidden;
+      padding: 0 0 67px 2px;
+      margin-bottom: -25px;
+      display: grid;
+      grid-template-columns: 1fr 0.5fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "imagen-flex line-divider date";
+      .imagen-flex {
+        grid-area: imagen-flex;
+        padding: 10px;
+        img {
+          width: 397px;
+          height: auto;
+        }
+      }
+      .line-divider {
+        grid-area: line-divider;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1.563rem;
+      }
+      .date {
+        padding: 0 10px 0 10px;
+        max-width: 500px;
+        grid-area: date;
+      }
+      .line-divider::before {
+        content: "";
+        display: block;
+        width: 0.938rem;
+        height: 0.938rem;
+        border: 2px solid $color-principal;
+        border-radius: 50%;
+      }
+      .line-divider::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2.655rem;
+        left: 50%;
+        margin-left: -1px;
+        width: 2px;
+        height: 70vh;
+        background: $color-principal;
+        min-height: 6.25rem;
+      }
+    }
   }
 }
 .pricing {
-  background-color: #f5f6fa;
   @include section-p;
-  h2.title {
-    text-align: center;
-    grid-area: title;
-  }
+  background-color: #f5f6fa;
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -73,19 +66,21 @@
     grid-template-areas:
       "title title title"
       "basic-package advanced-package pro-package";
+
+    h2.title {
+      text-align: center;
+      grid-area: title;
+    }
+    .precios-spa .basic-package {
+      grid-area: basic-package;
+    }
+    .precios-spa .advanced-package {
+      grid-area: advanced-package;
+    }
+    .precios-spa .pro-package {
+      grid-area: pro-package;
+    }
   }
-  .precios-spa .basic-package {
-    grid-area: basic-package;
-  }
-  .precios-spa .advanced-package {
-    grid-area: advanced-package;
-  }
-  .precios-spa .pro-package {
-    grid-area: pro-package;
-  }
-}
-@mixin cuidado-calificado {
-  
 }
 .quienes-somos {
   @include section-p;
@@ -98,28 +93,26 @@
       "info-fundadora info-peluquero"
       "info-estilista info-gerente";
     justify-items: center;
-  }
-  h4.title {
-    text-align: center;
-    margin-bottom: 50px;
-    grid-area: title;
-  }
-  .team .flex figure {
-    width: 100%;
-  }
-  .flex figure img {
-    width: 100%;
-  }
-  .team.info-fundadora {
-    grid-area: info-fundadora;
-  }
-  .team.info-peluquero {
-    grid-area: info-peluquero;
-  }
-  .team.info-estilista {
-    grid-area: info-estilista;
-  }
-  .team.info-gerente {
-    grid-area: info-gerente;
+
+    h4.title {
+      text-align: center;
+      margin-bottom: 50px;
+      grid-area: title;
+    }
+    .team.info-fundadora {
+      grid-area: info-fundadora;
+    }
+    .team.info-peluquero {
+      grid-area: info-peluquero;
+    }
+    .team.info-estilista {
+      grid-area: info-estilista;
+    }
+    .team.info-gerente {
+      grid-area: info-gerente;
+    }
+    .team .flex figure {
+      width: 100%;
+    }
   }
 }

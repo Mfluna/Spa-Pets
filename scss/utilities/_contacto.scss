@@ -1,9 +1,3 @@
-// CONTACTO
-.bg-principal {
-  @mixin bg-principal {
-    
-  }
-}
 /* CONTACTO ICONS */
 .contacto-icons {
   @include section-p;
@@ -11,22 +5,28 @@
     display: grid;
     grid-template-areas: "phone-contact mail-contact map-contact";
     justify-items: center;
+    .phone-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .phone-contact {
+      grid-area: phone-contact;
+    }
+    .mail-contact {
+      grid-area: mail-contact;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .map-contact {
+      grid-area: map-contact;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
-  .container > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .phone-contact {
-    grid-area: phone-contact;
-  }
-  .mail-contact {
-    grid-area: mail-contact;
-  }
-  .map-contact {
-    grid-area: map-contact;
-  }
-  .container figure img {
+  .container figure > img {
     padding: 1rem;
   }
 }
@@ -40,48 +40,48 @@
     width: auto;
     align-items: center;
     column-gap: 5%;
-  }
-  .item-formulario {
-    grid-area: item-formulario;
-  }
-  .item-map {
-    grid-area: item-map;
-    width: 100%;
-  }
-  .item-map map iframe {
-    border-radius: 0.3rem;
-  }
-  .item-formulario .bg {
-    padding: 3.125rem;
-    background-color: nth($list: $c-basics, $n: 5);
-    border-radius: 0.438rem;
-  }
-  .item-formulario label .flex > div {
-    @include padding-form;
-  }
-  .form-input {
-    display: block;
-    width: 100%;
-    min-height: 48px;
-    padding: 11px 19px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: nth($list: $c-basics, $n: 6);
-    background-color: nth($list: $c-basics, $n: 1);
-    background-image: none;
-    border-radius: 6px;
-    -webkit-appearance: none;
-    transition: 0.3s ease-in-out;
-    border: 1px solid transparent;
-  }
-  textarea.form-input {
-    height: 9.375rem;
-    min-height: 48px;
-    max-height: 255px;
-    resize: vertical;
-  }
-  .btn-formulario {
-    padding-top: 1.875rem;
+    .item-formulario {
+      grid-area: item-formulario;
+      .bg {
+        padding: 3.125rem;
+        background-color: nth($list: $c-basics, $n: 5);
+        border-radius: 0.438rem;
+      }
+      .item-formulario label .flex > div {
+        @include padding-form;
+      }
+      .form-input {
+        display: block;
+        width: 100%;
+        min-height: 48px;
+        padding: 11px 19px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: nth($list: $c-basics, $n: 6);
+        background-color: nth($list: $c-basics, $n: 1);
+        background-image: none;
+        border-radius: 6px;
+        -webkit-appearance: none;
+        transition: 0.3s ease-in-out;
+        border: 1px solid transparent;
+      }
+      textarea.form-input {
+        height: 9.375rem;
+        min-height: 48px;
+        max-height: 255px;
+        resize: vertical;
+      }
+      .btn-formulario {
+        padding-top: 1.875rem;
+      }
+    }
+    .item-map {
+      grid-area: item-map;
+      width: 100%;
+      .item-map map > iframe {
+        border-radius: 0.3rem;
+      }
+    }
   }
 }
