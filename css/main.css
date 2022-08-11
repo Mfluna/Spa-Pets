@@ -614,6 +614,9 @@ p.title-bg::before {
   .servicios .container .item-last {
     grid-area: item-last; }
 
+section.container.cookie.bg-light.w-auto {
+  display: none; }
+
 header#page-header {
   background-color: #252422;
   position: fixed;
