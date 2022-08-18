@@ -1249,9 +1249,7 @@ footer .row {
   }
 
   header .responsive-menu > div {
-    /* height: 4px; */
     background-color: var(--c-primary);
-    /* margin: 3px 0; */
     -webkit-border-radius: 3px;
     border-radius: 3px;
   }
@@ -1261,7 +1259,6 @@ footer .row {
     right: 0;
     background-color: transparent;
     border: 0;
-    /* width: 9%; */
     top: 0;
     -webkit-transition: all 0s ease;
     -moz-transition: all 0s ease;
@@ -1280,10 +1277,6 @@ footer .row {
     left: 0;
     height: 100%;
     width: 100%;
-    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
-    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
-    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
     background: #000;
     clip-path: circle(25px at calc(100% - 45px) 45px);
     transition: all 0.3s ease-in-out;
@@ -1295,8 +1288,6 @@ footer .row {
     position: absolute;
     z-index: 2;
     right: 5%;
-    /* left: 20px; */
-    /* top: 20px; */
     height: 50px;
     width: 50px;
     text-align: center;
@@ -1305,9 +1296,6 @@ footer .row {
     font-size: 20px;
     color: #000;
     cursor: pointer;
-    /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
-    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
     background: #fff;
     transition: all 0.3s ease-in-out;
   }
