@@ -864,14 +864,15 @@ header#page-header {
     align-items: center; }
   header#page-header .menu-nav {
     grid-area: menu-nav; }
-  header#page-header .menu-item {
-    display: inline-block; }
+  header#page-header ul.menu {
+    display: flex;
+    flex-wrap: nowrap; }
   header#page-header .menu-item a {
     text-decoration: none;
     padding: 10px;
     text-transform: uppercase;
     font-family: Oswald, sans-serif;
-    color: #2c343b;
+    color: #FFFCF2;
     letter-spacing: 0.08em;
     font-weight: 500;
     font-size: 1rem; }

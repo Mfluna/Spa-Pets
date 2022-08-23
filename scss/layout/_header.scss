@@ -24,15 +24,16 @@ header#page-header {
   .menu-nav {
     grid-area: menu-nav;
   }
-  .menu-item {
-    display: inline-block;
+  ul.menu{
+    display: flex;
+    flex-wrap: nowrap;
   }
   .menu-item a {
     text-decoration: none;
     padding: 10px;
     text-transform: uppercase;
     font-family: Oswald, sans-serif;
-    color: nth($list: $c-basics, $n: 6);
+    color: $color-secundario;
     letter-spacing: 0.08em;
     font-weight: 500;
     font-size: 1rem;
