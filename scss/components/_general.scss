@@ -9,7 +9,7 @@ body {
 a,
 a:hover {
   text-decoration: none;
-  color: $color-hover;
+  color: nth($list: $c-basics , $n: 1);
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
@@ -100,11 +100,8 @@ iframe {
   text-transform: uppercase;
 }
 .btn:hover {
-  opacity: 0.8;
-}
-.btn a:hover {
-  color: nth($list: $c-basics , $n: 1);
-  opacity: 3;
+  background-color: $color-terciario;
+  color: $color-principal;
 }
 .flex {
   display: flex;

@@ -53,6 +53,8 @@
 }
 // Sobre nosotros
 .sobre-nosotros {
+  @include section-p;
+  background-color: $color-secundario;
   .container {
     display: grid;
     grid-template-areas:
@@ -71,6 +73,7 @@
     }
   }
 }
+
 #items-garantizado {
   @include section-p;
   .container {
@@ -96,16 +99,16 @@
             overflow: hidden;
             min-height: 265px;
             transition: 0.7s;
-            .item-card:hover {
-              background: $color-principal;
-              color: #fff;
-              transform: scale(1.1);
-              z-index: 9;
               .title-flex,
               .text-flex p {
                 color: #fff;
               }
             }
+            .item-card:hover {
+              background: $color-principal;
+              color: #fff;
+              transform: scale(1.1);
+              z-index: 9;}
             .item-card:hover::before {
               background: #556cd61a;
             }
@@ -201,6 +204,3 @@
   }
 }
 
-section.container.cookie.bg-light.w-auto{
-    display: none;
-}

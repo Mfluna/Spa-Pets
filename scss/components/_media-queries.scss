@@ -21,6 +21,16 @@
         display: none;
       }
     }
+    // CAROUSEL
+    .spa-home .container .carousel.slide .carousel-inner .carousel-item {
+      background-color: nth($list: $c-basics, $n: 1);
+      img {
+        opacity: 0.5;
+      }
+    }
+    .spa-home .container .text-left .title {
+      filter: drop-shadow(2px 4px 4px black);
+    }
   }
   //   Contacto
   .contacto-form {
@@ -100,16 +110,6 @@
       -ms-flex-preferred-size: auto;
       flex-basis: auto;
     }
-  }
-  // CAROUSEL
-  .spa-home .container .carousel.slide .carousel-inner .carousel-item {
-    background-color: nth($list: $c-basics, $n: 1);
-    img {
-      opacity: 0.5;
-    }
-  }
-  .spa-home .container .text-left .title {
-    filter: drop-shadow(2px 4px 4px black);
   }
 }
 
