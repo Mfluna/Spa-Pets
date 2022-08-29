@@ -752,12 +752,11 @@ p.title-bg::before {
       padding: 20px 16px 0 0; }
 
 .spa-home {
+  padding: 3.125rem 0 3.125rem 0;
   position: relative;
   z-index: 3; }
   .spa-home .container {
-    max-width: initial;
     height: 100vh;
-    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
