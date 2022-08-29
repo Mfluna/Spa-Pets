@@ -219,6 +219,75 @@ p.title-bg::before {
   width: 30px;
   border-bottom: 1px solid; }
 
+.bubbly-button {
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FF7F27;
+  color: #FFFCF2;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 15px #FF7F27;
+  border-radius: 1rem; }
+  .bubbly-button .text-btn {
+    text-transform: uppercase;
+    font-family: Oswald, sans-serif; }
+  .bubbly-button:focus {
+    outline: 0; }
+  .bubbly-button:before, .bubbly-button:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat; }
+  .bubbly-button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, transparent 20%, #FF7F27 20%, transparent 30%), radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, transparent 10%, #FF7F27 15%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%; }
+  .bubbly-button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, transparent 10%, #FF7F27 15%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%), radial-gradient(circle, #FF7F27 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%; }
+  .bubbly-button:active {
+    transform: scale(0.9);
+    background-color: #ff700e;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2); }
+  .bubbly-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards; }
+  .bubbly-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards; }
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%; }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%; }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%; } }
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%; }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%; }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%; } }
+
 @media screen and (max-width: 900px) {
   .spa-home {
     height: auto; }
@@ -751,93 +820,98 @@ p.title-bg::before {
         display: flex;
         flex-direction: column;
         justify-content: center; }
-        #items-garantizado .container .row .quality-team .card-box .item-card {
-          flex: 0 50%;
-          background: #fff;
-          box-shadow: 0 2px 4px 0 #8890c333, 0 5px 15px 0 #252c6126;
-          border-radius: 1rem;
-          margin: 1.9rem;
-          padding: 10px 15px;
-          position: relative;
-          z-index: 1;
-          overflow: hidden;
-          min-height: 265px;
-          transition: 0.7s; }
-          #items-garantizado .container .row .quality-team .card-box .item-card .title-flex,
-          #items-garantizado .container .row .quality-team .card-box .item-card .text-flex p {
-            color: #fff; }
-        #items-garantizado .container .row .quality-team .card-box .item-card:hover {
-          background: #FF7F27;
-          color: #fff;
-          transform: scale(1.1);
-          z-index: 9; }
-          #items-garantizado .container .row .quality-team .card-box .item-card:hover .item-card:hover::before {
-            background: #556cd61a; }
-          #items-garantizado .container .row .quality-team .card-box .item-card:hover .item-card:before {
-            content: "";
-            position: absolute;
-            background: #556cd60d;
-            width: 170px;
-            height: 400px;
-            z-index: -1;
-            transform: rotate(42deg);
-            right: -56px;
-            top: -23px;
-            border-radius: 35px; }
-          #items-garantizado .container .row .quality-team .card-box .item-card:hover p.title-flex {
-            color: #212121;
-            font-size: 1.3rem;
-            margin-top: 13px;
-            margin-bottom: 13px; }
-          #items-garantizado .container .row .quality-team .card-box .item-card:hover .text-flex p {
-            font-size: 15px;
-            margin-bottom: 15px; }
-          #items-garantizado .container .row .quality-team .card-box .item-card:hover .hover_color_bubble {
-            position: absolute;
-            background: #3651cf26;
-            width: 100rem;
-            height: 100rem;
-            left: 0;
-            right: 0;
-            z-index: -1;
-            top: 16rem;
-            border-radius: 50%;
-            transform: rotate(-36deg);
-            left: -18rem;
-            transition: 0.7s; }
-          #items-garantizado .container .row .quality-team .card-box .item-card:hover .item-card:hover .hover_color_bubble {
-            top: 0rem; }
-          #items-garantizado .container .row .quality-team .card-box .item-card:hover .icon-calificated {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #fff;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center; }
-          #items-garantizado .container .row .quality-team .card-box .item-card:hover .icon-calificated img {
-            width: 26px;
-            height: 26px;
-            object-fit: contain; }
+      #items-garantizado .container .row .quality-team .item-card {
+        flex: 0 50%;
+        background: #fff;
+        box-shadow: 0 2px 4px 0 #8890c333, 0 5px 15px 0 #252c6126;
+        border-radius: 1rem;
+        margin: 1.9rem;
+        padding: 10px 15px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        min-height: 265px;
+        transition: 0.7s; }
+      #items-garantizado .container .row .quality-team .item-card:hover {
+        background: #FF7F27;
+        color: #FFF;
+        transform: scale(1.1);
+        z-index: 9; }
+      #items-garantizado .container .row .quality-team .item-card:hover::before {
+        background: #556cd61a; }
+      #items-garantizado .container .row .quality-team .item-card:before {
+        content: "";
+        position: absolute;
+        background: #556cd60d;
+        width: 170px;
+        height: 400px;
+        z-index: -1;
+        transform: rotate(42deg);
+        right: -56px;
+        top: -23px;
+        border-radius: 35px; }
+      #items-garantizado .container .row .quality-team p.title-flex {
+        color: #252422;
+        font-size: 1.3rem;
+        margin-top: 13px;
+        margin-bottom: 13px; }
+      #items-garantizado .container .row .quality-team .text-flex p {
+        font-size: 15px;
+        margin-bottom: 15px; }
+      #items-garantizado .container .row .quality-team .hover_color_bubble {
+        position: absolute;
+        background: #3651cf26;
+        width: 100rem;
+        height: 100rem;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        top: 16rem;
+        border-radius: 50%;
+        transform: rotate(-36deg);
+        left: -18rem;
+        transition: 0.7s; }
+      #items-garantizado .container .row .quality-team .item-card:hover .hover_color_bubble {
+        top: 0rem; }
+      #items-garantizado .container .row .quality-team .icon-calificated {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #fff;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      #items-garantizado .container .row .quality-team .icon-calificated img {
+        width: 26px;
+        height: 26px;
+        object-fit: contain; }
 
-.cuidado-calificado .container {
-  grid-template-columns: 2fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "title btn-precios"; }
+.cuidado-calificado {
+  padding: 3.125rem 0 3.125rem 0; }
+  .cuidado-calificado .container {
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "title btn-precios"; }
+    .cuidado-calificado .container .btn-precios button.btn {
+      background-color: #252422; }
 
-.servicios .container {
-  grid-template-areas: "title title" "text text" "item-first item-last";
-  justify-content: center;
-  justify-items: center; }
-  .servicios .container h4.title {
-    grid-area: title; }
-  .servicios .container p.text {
-    grid-area: text; }
-  .servicios .container .item-first {
-    grid-area: item-first; }
-  .servicios .container .item-last {
-    grid-area: item-last; }
+.servicios {
+  padding: 3.125rem 0 3.125rem 0; }
+  .servicios .container {
+    grid-template-areas: "title title" "text text" "item-first item-last";
+    justify-content: center;
+    justify-items: center; }
+    .servicios .container h4.title {
+      grid-area: title; }
+    .servicios .container p.text {
+      grid-area: text; }
+    .servicios .container .item-first {
+      grid-area: item-first; }
+    .servicios .container .item-last {
+      grid-area: item-last; }
+    .servicios .container .image-flex {
+      margin: 1rem; }
 
 header#page-header {
   background-color: #252422;
