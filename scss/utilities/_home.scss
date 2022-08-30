@@ -50,6 +50,45 @@
     }
   }
 }
+@media screen and (max-width: 900px) {
+  .spa-home {
+    height: auto;
+    .container {
+      padding: 10rem 1rem 10rem 1rem;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "text-left"
+        "carousel";
+      justify-content: center;
+      .text-left {
+        position: absolute;
+        z-index: 1;
+        top: 10%;
+      }
+      .redes-sociales {
+        right: -6rem;
+        display: none;
+      }
+    }
+    // CAROUSEL
+    .spa-home {
+      .container {
+        .carousel.slide {
+          grid-area: carousel;
+          .carousel-inner .carousel-item {
+            background-color: nth($list: $c-basics, $n: 1);
+            img {
+              opacity: 0.5;
+            }
+          }
+        }
+        .text-left .title {
+          filter: drop-shadow(2px 4px 4px black);
+        }
+      }
+    }
+  }
+}
 // Sobre nosotros
 .sobre-nosotros {
   @include section-p;
@@ -176,10 +215,22 @@
     grid-template-rows: 1fr;
     grid-template-areas: "title btn-precios";
     .btn-precios button.btn {
-      background-color: $color-terciario;
     }
   }
 }
+@media screen and (max-width: 900px) {
+  //   Cuidado Calificado
+  .cuidado-calificado {
+    .container {
+      grid-template-columns: 1;
+      grid-template-rows: 2;
+      grid-template-areas:
+        "title"
+        "btn-precios";
+    }
+  }
+}
+
 // Servicios
 .servicios {
   @include section-p;
@@ -207,4 +258,44 @@
     }
   }
 }
+@media screen and (max-width: 700px) {
+  //   Servicios
+  .servicios {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "title"
+        "text"
+        "item-first"
+        "item-last";
+    }
+  }
+}
 
+// Formulario
+@media screen and (max-width: 900px) {
+  .contacto-form {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "item-formulario"
+        "item-map";
+      padding: initial;
+      .item-formulario {
+        width: 100%;
+        .bg {
+          padding: 1.5rem;
+          .flex {
+            display: block;
+            width: 100%;
+            label {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

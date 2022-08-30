@@ -1,123 +1,5 @@
-
-
-
 @media screen and (max-width: 900px) {
-  // SPA HOME
-  .spa-home {
-    height: auto;
-    .container {
-      padding: 10rem 1rem 10rem 1rem;
-      height: 100%;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "text-left"
-        "bg-image";
-      justify-content: center;
-      .text-left {
-        position: absolute;
-        z-index: 1;
-      }
-      .redes-sociales {
-        right: -6rem;
-      }
-      .bg-image {
-        display: none;
-      }
-    }
-    // CAROUSEL
-    .spa-home .container .carousel.slide .carousel-inner .carousel-item {
-      background-color: nth($list: $c-basics, $n: 1);
-      img {
-        opacity: 0.5;
-      }
-    }
-    .spa-home .container .text-left .title {
-      filter: drop-shadow(2px 4px 4px black);
-    }
-  }
-  //   Contacto
-  .contacto-form {
-    .container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas:
-        "item-formulario"
-        "item-map";
-      padding: initial;
-      .item-formulario .bg {
-        padding: 1.5rem;
-        .flex {
-          display: block;
-          width: 100%;
-        }
-      }
-    }
-  }
-  //   Footer
-  footer .container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "logo-footer"
-      "item-servicios"
-      "item-ayuda"
-      "item-redes"
-      "copy-right";
-  }
-
-  //   SOBRE NOSOTROS
-
-  // Linea del tiempo
-  .line-divider {
-    position: relative;
-    padding: 25px 20px 0;
-  }
-  .linea-tiempo .item {
-    grid-template-areas: "line-divider line-divider";
-  }
-  // Pricing
-  .pricing .container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "title"
-      "basic-package"
-      "advanced-package"
-      "pro-package";
-    align-items: center;
-  }
-  //   Servicios
-  .toma-turno .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "imagen-left"
-      "right";
-  }
-}
-@media (min-width: 992px) {
-  // NAV
-  .navbar-expand-custom {
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    .navbar-nav {
-      -ms-flex-direction: row;
-      flex-direction: row;
-    }
-    .navbar-toggler {
-      display: none;
-    }
-    .navbar-collapse {
-      display: -ms-flexbox !important;
-      display: flex !important;
-      -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-    }
-  }
-}
-
-@media screen and (max-width: 700px) {
-  // HEADER
+  // Header
   header#page-header .container {
     column-gap: 1rem;
     grid-template-areas: "image-logo responsive-menu";
@@ -227,6 +109,106 @@
       display: none;
     }
   }
+  // SPA HOME
+  .spa-home {
+    height: auto;
+    .container {
+      padding: 10rem 1rem 10rem 1rem;
+      height: 100%;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "text-left"
+        "carousel";
+      justify-content: center;
+      .text-left {
+        position: absolute;
+        z-index: 1;
+      }
+      .redes-sociales {
+        right: -6rem;
+      }
+    }
+    // CAROUSEL
+    .spa-home {
+      .container {
+        .carousel.slide {
+          grid-area: carousel;
+          .carousel-inner .carousel-item {
+            background-color: nth($list: $c-basics, $n: 1);
+            img {
+              opacity: 0.5;
+            }
+          }
+        }
+        .text-left .title {
+          filter: drop-shadow(2px 4px 4px black);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px)  {
+  .spa-home{}
+}
+@media screen and (max-width: 900px) {
+  //   Footer
+  footer .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo-footer"
+      "item-servicios"
+      "item-ayuda"
+      "item-redes"
+      "copy-right";
+    .row {
+      .col-sm , .col-md-3{
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  // Linea del tiempo
+  .line-divider {
+    position: relative;
+    padding: 25px 20px 0;
+  }
+
+  .linea-tiempo .item {
+    grid-template-areas: "line-divider line-divider";
+  }
+  //   Servicios
+  .toma-turno .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "imagen-left"
+      "right";
+  }
+}
+@media (min-width: 992px) {
+  // NAV
+  .navbar-expand-custom {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    .navbar-nav {
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+    .navbar-toggler {
+      display: none;
+    }
+    .navbar-collapse {
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
   //   Spa home
   .spa-home .text-left {
     .redes-sociales {
@@ -252,28 +234,6 @@
         "item-three"
         "item-four";
       justify-items: center;
-    }
-  }
-  //   Cuidado Calificado
-  .cuidado-calificado {
-    .container {
-      grid-template-columns: 1;
-      grid-template-rows: 2;
-      grid-template-areas:
-        "title"
-        "btn-precios";
-    }
-  }
-  //   Servicios
-  .servicios {
-    .container {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      grid-template-areas:
-        "title"
-        "text"
-        "item-first"
-        "item-last";
     }
   }
 
@@ -308,23 +268,6 @@
         "left"
         "right";
     }
-  }
-  //   Sobre nosotros
-  .quienes-somos {
-    .container {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "title"
-        "info-fundadora"
-        "info-peluquero"
-        "info-estilista"
-        "info-gerente";
-    }
-  }
-
-  //   Cookies
-  .cookie {
-    left: 0;
   }
 }
 

@@ -71,14 +71,23 @@
       text-align: center;
       grid-area: title;
     }
-    .precios-spa .basic-package {
+    .basic-package {
       grid-area: basic-package;
+      .bg a{
+        color: $color-terciario;
+      }
+      }
+    .advanced-package {
+      grid-template-areas: advanced-package;
+      .bg a{
+        color: $color-terciario;
+      }
     }
-    .precios-spa .advanced-package {
-      grid-area: advanced-package;
-    }
-    .precios-spa .pro-package {
-      grid-area: pro-package;
+    .pro-package {
+      grid-template-areas: pro-package;
+      .bg a{
+        color: $color-terciario;
+      }
     }
   }
 }
@@ -116,3 +125,41 @@
     }
   }
 }
+@media screen and (max-width: 700px) {
+  .linea-tiempo {
+    .container {
+      grid-template-areas:
+        "line-divider"
+        "date";
+      .item {
+        display: flex;
+        .imagen-flex {
+          display: none;
+        }
+      }
+    }
+  }
+  .pricing {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "title"
+        "basic-package"
+        "advanced-package"
+        "pro-package";
+      align-items: center;
+    }
+  }
+  .quienes-somos {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "title"
+        "info-fundadora"
+        "info-peluquero"
+        "info-estilista"
+        "info-gerente";
+    }
+  }
+}
+
