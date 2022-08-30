@@ -393,8 +393,6 @@ p.title-bg::before {
       .spa-home .container .text-left {
         position: absolute;
         z-index: 1; }
-      .spa-home .container .redes-sociales {
-        right: -6rem; }
     .spa-home .spa-home .container .carousel.slide {
       grid-area: carousel; }
       .spa-home .spa-home .container .carousel.slide .carousel-inner .carousel-item {
@@ -408,17 +406,14 @@ p.title-bg::before {
   footer .container {
     grid-template-columns: 1fr;
     grid-template-areas: "logo-footer" "item-servicios" "item-ayuda" "item-redes" "copy-right"; }
-    footer .container .row .col-sm, footer .container .row .col-md-3 {
+    footer .container .row .col-sm,
+    footer .container .row .col-md-3 {
       padding: 0.5rem; }
   .line-divider {
     position: relative;
     padding: 25px 20px 0; }
   .linea-tiempo .item {
-    grid-template-areas: "line-divider line-divider"; }
-  .toma-turno .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "imagen-left" "right"; } }
+    grid-template-areas: "line-divider line-divider"; } }
 
 @media (min-width: 992px) {
   .navbar-expand-custom {
@@ -692,6 +687,16 @@ p.title-bg::before {
         margin-top: 0.5rem; }
     .presentacion-spa .container .right {
       grid-area: right; }
+
+@media screen and (max-width: 700px) {
+  .presentacion-spa .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "left" "right"; }
+  .toma-turno .container {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "imagen-left" "right"; } }
 
 .servicios-spa {
   padding: 3.125rem 0 3.125rem 0; }

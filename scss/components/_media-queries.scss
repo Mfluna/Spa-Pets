@@ -124,9 +124,6 @@
         position: absolute;
         z-index: 1;
       }
-      .redes-sociales {
-        right: -6rem;
-      }
     }
     // CAROUSEL
     .spa-home {
@@ -147,9 +144,7 @@
     }
   }
 }
-@media screen and (max-width: 700px)  {
-  .spa-home{}
-}
+
 @media screen and (max-width: 900px) {
   //   Footer
   footer .container {
@@ -161,7 +156,8 @@
       "item-redes"
       "copy-right";
     .row {
-      .col-sm , .col-md-3{
+      .col-sm,
+      .col-md-3 {
         padding: 0.5rem;
       }
     }
@@ -175,14 +171,6 @@
 
   .linea-tiempo .item {
     grid-template-areas: "line-divider line-divider";
-  }
-  //   Servicios
-  .toma-turno .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "imagen-left"
-      "right";
   }
 }
 @media (min-width: 992px) {

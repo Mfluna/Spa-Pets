@@ -26,6 +26,28 @@
     }
   }
 }
+@media screen and (max-width: 700px){
+  .presentacion-spa{
+    .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+          "left"
+          "right";
+    }
+  }
+  .toma-turno{
+    .container{
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "imagen-left"
+          "right";
+    }
+  }
+}
+
+
 // Servicio spa
 .servicios-spa {
   @include section-p;
