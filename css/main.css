@@ -474,18 +474,28 @@ p.title-bg::before {
       align-items: center; }
     .contacto-icons .container .phone-contact {
       grid-area: phone-contact; }
+      .contacto-icons .container .phone-contact p > a {
+        color: #252422; }
     .contacto-icons .container .mail-contact {
       grid-area: mail-contact;
       display: flex;
       flex-direction: column;
       align-items: center; }
+      .contacto-icons .container .mail-contact p > a {
+        color: #252422; }
     .contacto-icons .container .map-contact {
       grid-area: map-contact;
       display: flex;
       flex-direction: column;
       align-items: center; }
+      .contacto-icons .container .map-contact p > a {
+        color: #252422; }
   .contacto-icons .container figure > img {
     padding: 1rem; }
+
+@media screen and (max-width: 700px) {
+  .contacto-icons .container {
+    grid-template-areas: "phone-contact" " mail-contact" " map-contact"; } }
 
 .contacto-form {
   padding: 3.125rem 0 3.125rem 0; }

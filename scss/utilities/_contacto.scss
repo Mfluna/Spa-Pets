@@ -12,8 +12,8 @@
     }
     .phone-contact {
       grid-area: phone-contact;
-      a{
-        
+      p > a {
+        color: $color-terciario;
       }
     }
     .mail-contact {
@@ -21,18 +21,33 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      p > a {
+        color: $color-terciario;
+      }
     }
     .map-contact {
       grid-area: map-contact;
       display: flex;
       flex-direction: column;
       align-items: center;
+      p > a {
+        color: $color-terciario;
+      }
     }
   }
   .container figure > img {
     padding: 1rem;
   }
 }
+@media screen and (max-width: 700px) {
+  .contacto-icons .container {
+    grid-template-areas:
+      "phone-contact"
+      " mail-contact"
+      " map-contact";
+  }
+}
+
 // CONTACTO FORMULARIO
 .contacto-form {
   @include section-p;
