@@ -52,6 +52,7 @@
 }
 @media screen and (max-width: 900px) {
   .spa-home {
+    padding: 0;
     height: auto;
     .container {
       padding: 10rem 1rem 10rem 1rem;
@@ -64,10 +65,20 @@
         position: absolute;
         z-index: 1;
         top: 10%;
+        .bg {
+          h1.title {
+            font-size: 2.5rem;
+          }
+        }
       }
       .redes-sociales {
         right: -6rem;
         display: none;
+      }
+      .carousel.slide {
+        .carousel-item img  {
+          opacity: 0.5;
+        }
       }
     }
     // CAROUSEL
@@ -103,6 +114,7 @@
     justify-items: center;
     .text {
       grid-area: text;
+      text-align: left;
     }
     .btn-vermas {
       padding-top: 30px;
@@ -115,6 +127,7 @@
 #items-garantizado {
   @include section-p;
   .container {
+    padding: 0.5rem;
     .row {
       align-items: center;
       .quality-team {
