@@ -89,3 +89,19 @@
     }
   }
 }
+@media screen and (max-width: 700px){
+  .toma-turno .container{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "imagen-left"
+        "right";
+    gap: 5%;
+    .imagen-left{
+      grid-row-start: 2;
+    }
+    .right{
+      grid-row-end: 1;
+    }
+  }
+}

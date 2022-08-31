@@ -1,33 +1,30 @@
 .galeria-portfolio {
   @include section-p;
   .container {
-    display: grid;
-    ul.filtrar-tipos.flex {
-      grid-gap: 30px;
-      li {
+    .tipos-servicios {
+      .item {
+        display: grid;
       }
-      a::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 0;
-        height: 1px;
-        transition: 0.4s;
-        background: #000;
-      }
-    }
-    ul.filtrar-tipos.flex::after {
-      content: "";
-      position: absolute;
-      left: 35px;
-      right: 0;
-      top: 30px;
-      border-bottom: 1px solid #e8e9ee;
-    }
-    .tipos-servicios.flex {
       .galeria-images {
         padding: 20px 16px 0 0;
+      }
+    }
+  }
+}
+
+.portfolio {
+  .container-fluid {
+    .row {
+      .center {
+        button.filter-button {
+          font-size: 18px;
+          border: 2px solid #3f6184;
+          padding: 5px 10px;
+          text-align: center;
+          color: #3f6184;
+          margin-bottom: 30px;
+          background: transparent;
+        }
       }
     }
   }

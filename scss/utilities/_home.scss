@@ -248,6 +248,7 @@
 .servicios {
   @include section-p;
   .container {
+    display: grid;
     grid-template-areas:
       "title title"
       "text text"

@@ -91,6 +91,19 @@
     }
   }
 }
+@media screen and (max-width: 900px) {
+  .pricing {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "title"
+        "basic-package"
+        "advanced-package"
+        "pro-package";
+      align-items: center;
+    }
+  }
+}
 .quienes-somos {
   @include section-p;
   .container {
@@ -123,6 +136,19 @@
     .team .flex figure {
       width: 100%;
     }
+    .team{
+      .flex{
+        gap: 5%;
+        figure{
+          max-width: fit-content;
+        }
+        .datos-team{
+          .numero-contacto a{
+            color: $color-terciario;
+          }
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 700px) {
@@ -137,17 +163,6 @@
           display: none;
         }
       }
-    }
-  }
-  .pricing {
-    .container {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "title"
-        "basic-package"
-        "advanced-package"
-        "pro-package";
-      align-items: center;
     }
   }
   .quienes-somos {

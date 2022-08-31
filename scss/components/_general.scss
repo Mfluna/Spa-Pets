@@ -48,7 +48,6 @@ iframe {
 .container {
   width: 100%;
   height: auto;
-  // max-width: 1200px;
   position: relative;
   z-index: 5;
   padding-right: 40px;
@@ -162,12 +161,7 @@ iframe {
   background-image: url(../img/bg-imagen-02.jpg);
   background-position: center left;
 }
-.container {
-  display: grid;
-  grid-template-areas:
-    "title-bg"
-    "text-left";
-}
+
 .container .text-left {
   grid-area: text-left;
 }
